@@ -1,0 +1,11 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/2550307886_3467822883_631829896.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/1781701468_2336033760_3802660558.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/1141823455_1333067216_3802660558.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/3064592270_2304249630_2321705052.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/3345064500_1184019131_4274364385.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/7248608_2304249630_1574137038.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/1116663863_1738557873_3735970732.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/1116663863_2304249630_969114514.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/899477792_2245087507_2272471630.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/Motor3DExample/636070791_2304249630_4230379130.mp4'

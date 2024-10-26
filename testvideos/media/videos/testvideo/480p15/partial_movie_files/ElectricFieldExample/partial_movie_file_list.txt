@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/ElectricFieldExample/1185818338_1135914500_223132457.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/ElectricFieldExample/624642324_2647071380_1489093898.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/ElectricFieldExample/624642324_444755431_201429357.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/ElectricFieldExample/624642324_1704852926_1827652595.mp4'

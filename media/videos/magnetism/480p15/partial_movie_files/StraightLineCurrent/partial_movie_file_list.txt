@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/StraightLineCurrent/3861218545_424844320_1546107441.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/StraightLineCurrent/1314239504_199539605_1546107441.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/StraightLineCurrent/1064668805_3983046952_480934286.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/StraightLineCurrent/1064668805_2304249630_1969387173.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/StraightLineCurrent/2532880208_3623008804_2393946215.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/StraightLineCurrent/1203453162_2304249630_3739163454.mp4'

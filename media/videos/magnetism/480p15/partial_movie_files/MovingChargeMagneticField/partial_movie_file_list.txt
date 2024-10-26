@@ -1,0 +1,8 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/2550307886_1768387608_223132457.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/2732211768_2304249630_3243306601.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/2732211768_2146283310_2819570666.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/2732211768_2304249630_3306510637.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/2662538551_2445265877_2467467088.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/1971547632_1234135349_806522598.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/media/videos/magnetism/480p15/partial_movie_files/MovingChargeMagneticField/2503435238_2304249630_616807750.mp4'

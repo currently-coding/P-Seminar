@@ -1,0 +1,4 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldScene/261991848_66111383_3737553349.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldScene/4092177041_2742678730_2952671106.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldScene/4092177041_3909999388_2293601697.mp4'

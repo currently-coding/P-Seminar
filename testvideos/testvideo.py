@@ -1,15 +1,18 @@
 from manim import *
-
 from manim_physics import *
 
 
-class MagneticFieldExample(ThreeDScene):
+class ElectricFieldExample(Scene):
     def construct(self):
-        wire = Wire(Circle(2).rotate(PI / 2, UP))
-        mag_field = MagneticField(
-            wire,
-            x_range=[-5, 5],
-            y_range=[-5, 5],
-        )
-        self.set_camera_orientation(PI / 3, PI / 5)
-        self.add(wire, mag_field)
+        def FieldUpdater(mob):
+            mob.become(ElectricField(charge1, charge2))
+
+        charge1 = Charge(-1, LEFT)
+        charge2 = Charge(+1, RIGHT)
+        field = ElectricField(charge1, charge2)
+
+        field.add_updater(FieldUpdater)
+        self.play(Create(charge1), Create(charge2))
+        self.play(Create(field))
+        self.play(charge1.animate().shift(LEFT))
+        self.wait()
