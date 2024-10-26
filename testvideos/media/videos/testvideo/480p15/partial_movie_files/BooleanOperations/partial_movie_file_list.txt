@@ -1,0 +1,10 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/1185818338_2392863998_223132457.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_4147107551_1325328492.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_461068324_1455614010.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_1508989964_3592923467.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_1247838009_980103106.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_708050354_1298036728.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_1084891453_2555219032.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_480590962_931695202.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/BooleanOperations/624642324_3661132715_2213802548.mp4'
