@@ -6,15 +6,17 @@ import math
 class MyScene(ThreeDScene):
     angular_speed = PI
     carousel_radius = 2
+    seat_radius = carousel_radius
     num_chains = 8
     chain_length = 1.5
-    theta = 0
+    theta = ValueTracker(0)
     angle = 0
     t = 0
+    info_tex = MathTex(r"\tan{\theta}=",r"\frac{F_z}{F_G}")
 
     def create_chain_and_seat_template(self):
         chain_start = np.array([self.carousel_radius, 0, 0])
-        chain_end = chain_start * (1 + math.sin(self.theta) * self.chain_length / self.carousel_radius) + np.array([0, 0, -math.cos(self.theta) * self.chain_length])
+        chain_end = chain_start * (1 + math.sin(self.theta.get_value()) * self.chain_length / self.carousel_radius) + np.array([0, 0, -math.cos(self.theta.get_value()) * self.chain_length])
         direc = chain_end - chain_start
         chain = Cylinder(radius=0.02, height=self.chain_length, direction=direc, color=WHITE).move_to(chain_start + direc / 2)
         seat = Sphere(radius=0.1, color=RED).move_to(chain_end)
@@ -33,22 +35,18 @@ class MyScene(ThreeDScene):
 
         return VGroup(base, chains_and_seats)
 
-    def change_theta(self, dt):
-        # TODO change this
-        self.t += dt
 
-        if self.t <= 2:
-            pass
-        elif self.t <= 3:
-            self.theta = PI/6 * (1-math.cos(PI*(self.t-2)))
-        elif self.t <= 5:
-            pass
-        else:
-            self.theta = PI/6 * (1-math.cos(PI*(self.t-4)))
+    def adjust_tex(self, tex: MathTex):
+        tex.rotate(PI/2, axis=IN)
+        tex.rotate(-self.camera.get_phi(), axis=UP)
+        tex.rotate(PI, axis=IN)
+        tex.shift(2*OUT)
+        return tex
+
 
     def construct(self):
         # Set up 3D camera
-        self.set_camera_orientation(phi=75 * DEGREES, theta=30 * DEGREES)
+        self.set_camera_orientation(phi=75 * DEGREES, theta=0)
         swing_carousel = self.create_carousel()
 
         # Add carousel to the scene
@@ -56,9 +54,8 @@ class MyScene(ThreeDScene):
 
         # Define an updater to continuously change the angle `self.theta` over time
         def update_carousel(mob, dt):
-            self.change_theta(dt)  # Oscillating change in angle
-            seat_radius = self.carousel_radius + self.chain_length * math.sin(self.theta)
-            self.angular_speed = (9.81*math.tan(self.theta)/seat_radius)**0.5
+            self.seat_radius = self.carousel_radius + self.chain_length * math.sin(self.theta.get_value())
+            self.angular_speed = (9.81*math.tan(self.theta.get_value())/self.seat_radius)**0.5
 
             self.angle += dt * self.angular_speed  # Increase angle gradually
             updated_carousel = self.create_carousel()
@@ -67,9 +64,25 @@ class MyScene(ThreeDScene):
         # Apply the updater to the carousel group
         swing_carousel.add_updater(update_carousel)
 
+
+        self.adjust_tex(self.info_tex)
+        self.play(Write(self.info_tex))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"\tan{\theta}=\frac{m\omega^2r}{mg}"))))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"\tan{\theta}=\frac{\omega^2r}{g}"))))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"g\tan{\theta}=\omega^2r"))))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"\frac{g\tan{\theta}}{r}=\omega^2"))))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"\sqrt{\frac{g\tan{\theta}}{r}}=\omega"))))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"\omega=\sqrt{\frac{g\tan{\theta}}{r}}"))))
+        self.play(Transform(self.info_tex, self.adjust_tex(MathTex(r"\omega=",r"\sqrt{\frac{9.81\cdot\tan{" + f"{self.theta.get_value():.5f}" + "}}{" + f"{self.seat_radius:.5f}" + "}}=" + f"{self.angular_speed:.5f}"))))
+        self.info_tex.add_updater(lambda tex: tex.become(self.adjust_tex(MathTex(r"\omega=\sqrt{\frac{9.81\cdot\tan{" + f"{self.theta.get_value():.5f}" + "}}{" + f"{self.seat_radius:.5f}" + "}}=" + f"{self.angular_speed:.5f}"))))
+
+
         # Animate the carousel rotating around a vertical axis through its center
-        self.wait(7)
+        self.play(self.theta.animate.set_value(PI/3), run_time=2)
+        self.wait(3)
+        self.play(self.theta.animate.set_value(PI / 6), run_time=2)
+        self.wait(3)
+        self.play(self.theta.animate.set_value(0), run_time=2)
 
 # To run this, save the file and use the following command:
 # manim -pql your_file_name.py SwingCarousel3D
-
