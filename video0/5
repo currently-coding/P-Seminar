@@ -2,13 +2,27 @@ from manim import *
 from manim_physics import *
 
 
+class ElectricFieldExample(Scene):
+    def construct(self):
+        def FieldUpdater(mob):
+            mob.become(ElectricField(charge1, charge2))
+
+        charge1 = Charge(-1, LEFT)
+        charge2 = Charge(+1, RIGHT)
+        field = ElectricField(charge1, charge2)
+
+        field.add_updater(FieldUpdater)
+        self.play(Create(charge1), Create(charge2))
+        self.play(Create(field))
+        self.play(charge1.animate().shift(LEFT))
+        self.wait()
+
+
 class MagneticFieldExample(ThreeDScene):
     def construct(self):
         def FieldUpdater(mob):
             mob.become(
-                MagneticField(
-                    *wires, x_range=[-10, 10], y_range=[-10, 10]
-                )  # Unpack list
+                MagneticField(*wires, x_range=[-5, 5], y_range=[-5, 5])  # Unpack list
             )
 
         # Define the number of wires
@@ -21,32 +35,31 @@ class MagneticFieldExample(ThreeDScene):
         ]
 
         # Calculate target positions in a circular layout
-        spacing = 2  # Base distance factor for spacing, can be adjusted as needed
         target_positions = [
-            np.array(
-                [(i - (num_wires - 1) / 2) * spacing, 0, 0]
-            )  # Position along x-axis
+            radius
+            * np.array(
+                [np.cos(2 * PI * i / num_wires), np.sin(2 * PI * i / num_wires), 0]
+            )
             for i in range(num_wires)
         ]
 
         # Create the magnetic field using all wires
         mag_field = MagneticField(
-            *wires, x_range=[-10, 10], y_range=[-10, 10]
+            *wires, x_range=[-5, 5], y_range=[-5, 5]
         )  # Unpack list
         mag_field.add_updater(FieldUpdater)
         self.set_camera_orientation(PI / 4, PI / 3)
 
         # Animate each wire moving to its circular target position
-        self.play(Create(mag_field), *[Create(wire) for wire in wires])
-        self.wait(4)
         self.play(
             *[
                 wire.animate.move_to(target)
                 for wire, target in zip(wires, target_positions)
             ],
+            Create(mag_field)
         )
 
-        self.wait(10)
+        self.wait(5)
 
 
 # error: https://github.com/Matheart/manim-physics/issues/34

@@ -1,3 +1,5 @@
 # This file is used internally by FFMPEG.
-file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldExample/261991848_66111383_3013997637.mp4'
-file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldExample/4092177041_3494816192_668623618.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldExample/3324633478_1378037739_223132457.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldExample/3596320504_3909999388_2081178847.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldExample/3596320504_3370017909_543347823.mp4'
+file 'file:/home/me/Documents/software/P-Seminar/testvideos/media/videos/testvideo/480p15/partial_movie_files/MagneticFieldExample/3596320504_1925444564_2588384573.mp4'
